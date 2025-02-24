@@ -17,6 +17,7 @@ export async function POST(req) {
       const data = {
         userName: userName,
         userEmail: userEmail,
+        credit: 5,
       };
       await setDoc(doc(db, "users", userEmail), data);
       return NextResponse.json(data);
